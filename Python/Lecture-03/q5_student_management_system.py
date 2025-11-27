@@ -22,8 +22,7 @@ while True:
     if(choice == "A"):
         student_name = input("\nEnter the name of the student : ")
         marks = int(input("Enter his marks : "))
-        new_student = {student_name: marks}
-        students.update(new_student)
+        students[student_name] = marks
 
         print("\nStudent added succesfully")
 
