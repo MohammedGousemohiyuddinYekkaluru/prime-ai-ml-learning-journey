@@ -9,3 +9,6 @@ with open("names.txt", "w") as f:
 with open("names.txt", "r") as f:
     names = f.read()
     print(names)
+
+
+# i moved the files that are created outside into the lecture-05 folder
