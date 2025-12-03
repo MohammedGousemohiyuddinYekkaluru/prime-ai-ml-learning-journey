@@ -26,7 +26,8 @@ responses = {
     "how are you": "I am very fine. Thank you",
     "who are you": "I am smart AI chatbot",
     "motivate me": "Keep going. Every big of your project makes you a better developer",
-    "happy": "Great to hear that",
+    "happy": "That's awesome! Keep smiling, life is beautiful 😊",
+    "sad": "I'm sorry you're feeling sad. Things will get better 💙 Stay strong.",
     "bye": "Bye! Talk to you later"
 }
 
@@ -45,6 +46,8 @@ while True:
     user_input = input("Please ask your question : ")
     reply = getResponseFromBot(user_input)
     print("Bot Response :", reply)
+
+    time.sleep(0.5) # 1 second delay after response
 
     if "bye" in user_input.lower():
         break
