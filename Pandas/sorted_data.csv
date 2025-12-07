@@ -1,0 +1,11 @@
+,id,name,age,country,gender,income,tax
+4,4,Maria Garcia,34.0,Spain,F,50.0,10%
+9,9,Carlos Ruiz,50.0,Mexico,M,45000.0,10%
+3,3,Alex,50.0,US,U,47000.0,10%
+5,5,Li Wei,27.0,China,M,51000.0,10%
+0,1,John Doe,29.0,US,M,55000.0,10%
+10,10,Emily Davis,31.0,US,50,58000.0,10%
+2,2,Jane Smith,50.0,Canada,F,62000.0,20%
+8,8,Rachel Lee,29.0,US,F,62000.0,20%
+7,7,Ahmed Khan,38.0,50,M,68000.0,20%
+6,6,50,45.0,India,F,73000.0,20%
