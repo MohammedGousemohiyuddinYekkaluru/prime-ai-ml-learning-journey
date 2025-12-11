@@ -58,6 +58,29 @@ SELECT name, age, followers, email
 FROM user
 WHERE age NOT IN (14, 16);
 
+--Limit clause
+SELECT name, age, followers, email
+FROM user
+WHERE age > 14
+LIMIT 2;
+
+--Order by clause
+SELECT name, age, followers
+FROM user
+ORDER BY followers ASC; --ASC -> Ascending order/DESC -> Descening order
+
+--Aggregate Functions
+SELECT max(age) FROM `user`; --max
+SELECT min(age) FROM `user`;
+
+SELECT avg(age) FROM `user`;
+
+SELECT COUNT(age) FROM `user` WHERE age >= 14;
+
+SELECT sum(followers) FROM `user`;
+
+
+
 CREATE TABLE posts (
     id INT PRIMARY KEY,
     content VARCHAR(100),
