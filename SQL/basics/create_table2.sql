@@ -26,6 +26,38 @@ SELECT id, name, age FROM `user`;
 SELECT DISTINCT age FROM `user`; --selects unique ages
 SELECT * FROM `user`;
 
+--selecting data on conditions using WHERE Clause
+SELECT name, followers FROM `user` WHERE followers >= 200;
+
+SELECT name, age FROM `user` WHERE age + 1 = 18;
+
+--selecting data using Operators
+SELECT name, age, followers
+FROM user
+WHERE age > 15 or followers > 200;
+
+SELECT name, age, followers
+FROM user
+WHERE age BETWEEN 15 AND 17;
+
+SELECT name, age, email
+FROM user
+WHERE email IN ("donald@gmail.com", "bob123@gnail.com", "abc@gmail.com");
+
+INSERT INTO `user`
+(id, age, name, email, followers, following)
+VALUES
+(5, 14, "eve", "eve@yahoo.in", 400, 145),
+(6, 16, "farah", "farah@mail.in", 10000, 1045);
+
+SELECT name, age, followers, email
+FROM user
+WHERE age IN (14, 16);
+
+SELECT name, age, followers, email
+FROM user
+WHERE age NOT IN (14, 16);
+
 CREATE TABLE posts (
     id INT PRIMARY KEY,
     content VARCHAR(100),
