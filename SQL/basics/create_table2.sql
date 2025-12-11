@@ -79,6 +79,18 @@ SELECT COUNT(age) FROM `user` WHERE age >= 14;
 
 SELECT sum(followers) FROM `user`;
 
+--Group by Clause
+SELECT age, count(id) FROM `user` GROUP BY age;
+
+SELECT age, max(followers) FROM `user` GROUP BY age;
+
+--Having Clause -> it applies after Group by
+--General order
+SELECT age, max(followers) 
+FROM `user` 
+GROUP BY age 
+HAVING max(followers) > 200
+ORDER BY max(followers) DESC;
 
 
 CREATE TABLE posts (
