@@ -32,3 +32,25 @@ FROM employee;
 --3rd --> employee who works in IT Dept.,
 SELECT * FROM employee
 WHERE `Department` = "IT";
+
+--4th --> employees with a slary greater than 6000
+SELECT * FROM employee
+WHERE `Salary` > 6000;
+
+--5th --> employees order by HireDate
+SELECT * FROM employee
+ORDER BY `HireDate` DESC;
+
+--6th --> unique departments
+SELECT DISTINCT Department
+FROM employee;
+
+--Or
+SELECT Department
+FROM employee
+GROUP BY `Department`;
+
+--7th --> employees whose first name starts with "A"
+SELECT FirstName, Department, Salary
+FROM employee
+WHERE `FirstName` LIKE "A%";
