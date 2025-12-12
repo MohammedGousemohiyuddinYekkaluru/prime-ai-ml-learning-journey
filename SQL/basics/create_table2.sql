@@ -92,6 +92,46 @@ GROUP BY age
 HAVING max(followers) > 200
 ORDER BY max(followers) DESC;
 
+--UPDATE Table
+UPDATE `user`
+SET followers = 600
+WHERE age = 16
+
+SELECT name, age, followers FROM `user` WHERE age = 16;
+
+--DELETE Table
+DELETE FROM instauser
+WHERE age =  14;
+
+--ALTER Table -> to change the schema
+
+--Add column
+ALTER TABLE `user`
+ADD COLUMN city VARCHAR(25) DEFAULT "Delhi";
+
+--Drop column
+ALTER TABLE `user`
+DROP COLUMN email;
+
+--Rename Table
+ALTER TABLE `user`
+RENAME TO instaUser;
+
+--Change column name (rename)
+ALTER TABLE instauser
+CHANGE COLUMN followers subscribers INT DEFAULT 0;
+
+--Modify Column
+ALTER TABLE instauser
+MODIFY subscribers INT DEFAULT 5;
+
+--TRUNCATE Table
+TRUNCATE TABLE instauser;
+
+DROP TABLE instauser;
+
+
+
 
 CREATE TABLE posts (
     id INT PRIMARY KEY,
@@ -108,5 +148,7 @@ VALUES
 (103, "Hello guys", 3);
 
 SELECT * FROM posts;
+
+DROP TABLE posts;
 
 
