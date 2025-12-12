@@ -37,6 +37,3 @@ ADD COLUMN city VARCHAR(25) DEFAULT "Gurgaon";
 --5th
 ALTER TABLE teacher
 DROP COLUMN ctc;
-
-SELECT * FROM teacher;
-
