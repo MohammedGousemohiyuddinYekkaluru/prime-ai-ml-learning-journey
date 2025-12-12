@@ -54,3 +54,18 @@ GROUP BY `Department`;
 SELECT FirstName, Department, Salary
 FROM employee
 WHERE `FirstName` LIKE "A%";
+
+--8th --> employees whose salaries are between 4000 and 7000
+SELECT FirstName, Salary, Department
+FROM employee
+WHERE `Salary` BETWEEN 4000 AND 7000;
+
+--9th --> Average salary of all employees
+select avg(salary) 
+FROM employee;
+
+--10th 
+SELECT department, count(*) as employee_count
+FROM employee
+GROUP BY `Department`
+HAVING COUNT(*) >= 3;
