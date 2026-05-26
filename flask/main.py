@@ -6,17 +6,17 @@ app = Flask(__name__, static_folder="assets")
 def hello_world():
     return render_template("index.html")
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login_page():
-    return render_template("login.html")
-
-@app.route("/handle-login", methods=["GET", "POST"])
-def handle_login():
     if request.method == "POST":
         name = request.form["username"]
         password = request.form["password"]
 
-        return f"Welcome {name}!"
+        return f"<p>Welcome {name}!</p>"
+    
+    else:
+        return render_template("login.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
