@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request 
+from flask import Flask, render_template, url_for, request, jsonify
 
 app = Flask(__name__)
 
@@ -7,6 +7,14 @@ def hello_world():
     name = request.args.get("name", default= "ananymous")
     subject = request.args.get("subject")
     return render_template("index.html", name= name, subject= subject)
+
+@app.route("/jsonAPI")
+def json_API():
+    data = {
+        "msg": "working with json & API"
+    }
+
+    return jsonify(data)
 
 @app.route("/login", methods=["GET", "POST"])
 def login_page():
