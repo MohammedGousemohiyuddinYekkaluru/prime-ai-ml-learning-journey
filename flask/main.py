@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    name = request.args.get("name", default= "ananymous")
+    name = request.args.get("name", default= "anonymous")
     subject = request.args.get("subject")
     return render_template("index.html", name= name, subject= subject)
 
@@ -22,7 +22,10 @@ def login_page():
         name = request.form["username"]
         password = request.form["password"]
 
-        return f"<p>Welcome {name}!</p>"
+        friends = ["Adam", "Bob", "charlie", "Dan"]
+        header = "<header>ABC website</header>"
+
+        return render_template("welcome.html", name=name, password=password, friends=friends, header=header)
     
     else:
         return render_template("login.html")
